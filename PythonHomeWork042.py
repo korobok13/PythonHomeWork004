@@ -15,3 +15,19 @@
 # 4 -> 1 2 3 4
 # 9
 
+from random import randint
+n = int(input('Введите количество кустов: '))
+list_1 = []
+i = 0
+for i in range(n):
+    list_1.append(randint(1, n))
+i = 1
+list_max = 0
+for i in range(len(list_1) - 1):
+    list_sum = list_1[i] + list_1[i - 1] + list_1[i + 1]
+    if list_sum > list_max:
+        list_max = list_sum
+        i += 1
+print(f'{n} -> {list_1}')
+print(list_max)
+
