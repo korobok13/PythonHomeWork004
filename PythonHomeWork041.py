@@ -6,3 +6,26 @@
 #  m - кол-во элементов второго множества. 
 #  Затем пользователь вводит сами элементы множеств.
 
+# 11 6
+# 2 4 6 8 10 12 10 8 6 4 2
+# 3 6 9 12 15 18
+# 6 12
+
+
+from random import randint
+n = int(input('Введите количество элементов первого множества: '))
+list_1 = []
+m = int(input('Введите количество элементов второго множества: '))
+list_2 = []
+for _ in range(n):
+    list_1.append(randint(1, n))
+for _ in range(m):
+    list_2.append(randint(1, m,))
+list_1.sort()
+list_2.sort()
+set_1 = set(list_1)
+set_2 = set(list_2)
+print(list_1)
+print(list_2)
+set_sum = set.union(set_1, set_2)
+print(*set_sum)
